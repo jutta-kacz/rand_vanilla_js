@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Roboto:400,700&subset=latin-ext');
+
+body, html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	overflow-x: hidden;
+	margin: 0;
+	background: #dcdcdc; 
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: .04em;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	vertical-align: middle;
+	justify-content: center;
+}
+
+.container {
+	display: flex;
+	max-width: 1200px;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 30px auto;
+}
+
+.wrapper {
+	margin: 10px 30px;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1200px;
+	min-height: 100px;
+	margin: 10px auto;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Merriweather', serif;
+}
+
+.title {
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.title--small {
+	font-size: 36px;
+}
+
+section {
+	margin: 50px 30px;
+}
+
+.col-4	{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+	flex-direction: column;
+	width: calc(25% - 30px);
+	min-width: 250px;
+	min-height: 200px;
+	margin: 0 15px 30px;
+	box-shadow: 2px 4px 6px rgba(0, 0, 0, .25);
+	transition: all .9s ease;
+}
+
+.col-12 {
+	width: calc(100% - 30px);
+	height: auto;
+	margin: 0 15px 60px;
+}
+
+.values__hld {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.values__hld > p {
+	width: 50%;
+	margin: 3px 0;
+	padding: 15px 10px;
+	box-shadow: 2px 4px 6px rgba(0, 0, 0, .25);
+}
+
+p {
+	letter-spacing: .08em;
+	text-align: center;
+}
+
+.site-btn {
+	display: block;
+	margin: 10px auto 20px;
+	padding: 15px 11px;
+	cursor: pointer;
+	border: 1px solid #27C229;
+	border-radius: 4px;
+	background-color: #27C229;
+    color: rgba(255, 255, 255, 1);
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: .4em;
+	text-transform: uppercase;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+	transition: background-color .3s ease-in-out;
+}
+
+.site-btn:hover, .site-btn:focus {
+	background-color: #21A623;
+
+}
+
+@media all and (max-width: 767px) {
+	.title {
+		font-size: 30px;
+	}
+	.title--small {
+		font-size: 26px;
+	}
+	.values__hld > p {
+		width: calc(100% - 40px);
+	}
+}
+
+@media all and (max-width: 480px) {
+	.title {
+		font-size: 28px;
+	}
+	.title--small {
+		font-size: 22px;
+	}
+	p {
+		font-size: 18px;
+	}
+	.col-4 {
+		min-height: 100px;
+	}
+	.values__hld > p {
+		width: calc(100% - 20px);
+	}
+}
